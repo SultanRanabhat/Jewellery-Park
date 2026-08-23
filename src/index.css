@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1C1C1C;
+  --color-secondary: #C6A15B;
+  --color-background: #FAF8F3;
+  --color-white: #FFFFFF;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.title-text {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+
+
