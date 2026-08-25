@@ -29,12 +29,12 @@ function Header() {
   return (
     <>
     
-    <header className='p-5 bg-primary text-white'>
+    <header className='p-5 bg-primary text-white text-[12px]'>
       <div className='container flex items-center justify-between' >
 
         <a href='/'><img src='' alt='headerLogo'/></a>
 
-        <nav className='flex items-center gap-8'>
+        <nav className='flex items-center gap-8 text-[12px]'>
           {navbar.map((item)=>
           <NavLink 
           key={item.name}

@@ -61,18 +61,18 @@ const footercontactnav=[
   return (
     <>
 
-    <footer className='p-5 bg-primary text-white'>
+    <footer className='p-5 bg-primary text-white text-[10px]'>
       <div className='container flex justify-between'>
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-2'>
           <img src='' alt='footerLogo'/>
           <p>----------<br/>Jwelens Slogan Here<br/>----------</p>
-          <div className='flex row gap-5'>
+          <div className='flex row gap-2'>
             <FaFacebook/>
             <FaInstagram/>
           </div>
         </div>
 
-        <nav className='flex flex-col gap-5'>
+        <nav className='flex flex-col gap-2 text-[10px]'>
           {footernav.map((items)=>
           <NavLink
           key={items.name}
@@ -80,7 +80,7 @@ const footercontactnav=[
           )}
         </nav>
 
-        <nav className='flex flex-col gap-5'>
+        <nav className='flex flex-col gap-2 text-[10px]'>
           {secondfooternav.map((items)=>
           <NavLink
           key={items.name}
@@ -88,7 +88,7 @@ const footercontactnav=[
           )}
         </nav>
 
-        <nav className='flex flex-col gap-5'>
+        <nav className='flex flex-col gap-2 text-[10px]'>
           {footercontactnav.map((items)=>
           <NavLink
           key={items.name}
