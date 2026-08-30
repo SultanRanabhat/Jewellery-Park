@@ -1,5 +1,5 @@
 import React from 'react'
-import ChooseData from '../../data/ChooseData'
+import ChooseData from '../data/ChooseData'
 
 function WhyChooseUs() {
 

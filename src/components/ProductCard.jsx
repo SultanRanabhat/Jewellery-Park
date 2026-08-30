@@ -1,59 +1,28 @@
 import React from 'react'
-import jhumka from '../assets/jhumka.webp'
-import ring from '../assets/ring.jpg'
-import neckless from '../assets/neckless.avif'
-import pauju from '../assets/pauju.webp'
 import {Eye , Heart} from 'lucide-react'
+import ProductList from '../data/ProductList'
+import { useNavigate } from 'react-router-dom'
 
 
 function ProductCard() {
 
-    const productlist=[
-        {
-            id: 1,
-            name: "Neckless",
-            type: "Gold",
-            price:"100000",
-            gender: "Women",
-            img: neckless,
-        },
-        {
-            id: 2,
-            name: "Jhumka",
-            type: "Gold",
-            price:"100000",
-            gender: "Women",
-            img: jhumka,
-        },
-        {
-            id: 3,
-            name: "Pauju",
-            type: "Gold",
-            price:"100000",
-            gender: "Women",
-            img: pauju,
-        },
-        {
-            id: 4,
-            name: "Ring",
-            type: "Gold",
-            price:"100000",
-            gender: "Men",
-            img: ring,
-        },
-    ]
+    const navigate = useNavigate();
 
+    const handleViewDetails = (productId) =>{
+        console.log("button viewdetailsclicked")
+        navigate(`/product/${productId}`)
+    }
     
   return (
     <>
     <div className='container text-center flex justify-between'>
-    {productlist.map((product)=>(
+    {ProductList.map((product)=>(
         <div key={product.id} className='border rounded-bl-3xl rounded-tr-3xl text-center p-3 shadow-lg shadow-black/50 bg-white '>
             <div className="w-50 h-50 relative">
                 <img src={product.img} alt={product.name} className="w-full h-full object-cover"/> 
             
                 <div className='flex absolute top-0 left-0 right-0 justify-between '>
-                    <button className='border rounded-full p-2 bg-white/50' >
+                    <button  className='border rounded-full p-2 bg-white/50' >
                         <Eye/>
                     </button>
                     <button className='border rounded-full p-2 bg-white/50'>
@@ -68,6 +37,10 @@ function ProductCard() {
                 <hr className='mb-5 mx-auto border-secondary w-20'/>
                 <p>Price: Nrs.{product.price}</p>
                 <p>For: {product.gender}</p>
+            </div>
+            <div className='flex justify-between'>
+            <button className='smallbuttons'>Buy Now</button>
+            <button  onClick= {()=> handleViewDetails(product.id)} className='smallbuttons'>View Details</button>
             </div>
         </div>
         ))}

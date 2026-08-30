@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import {CircleUser} from "lucide-react"
+import {CircleUser , ShoppingCart} from "lucide-react"
 
 
 function Header() {
@@ -42,8 +42,10 @@ function Header() {
           )}
         </nav>
 
-        
+        <div className='flex gap-5'>
         <a href='/loginSignup'><CircleUser/></a>
+        <a href='/cart'><ShoppingCart /></a>
+        </div>
 
 
       </div>
