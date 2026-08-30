@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook , FaInstagram } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import footerLogo from '../assets/footerLogo.png'
 
 function Footer() {
 const footernav=[
@@ -64,8 +65,10 @@ const footercontactnav=[
     <footer className='p-5 bg-primary text-white text-[10px]'>
       <div className='container flex justify-between'>
         <div className='flex flex-col gap-2'>
-          <img src='' alt='footerLogo'/>
-          <p>----------<br/>Jwelens Slogan Here<br/>----------</p>
+          <img src={footerLogo} alt='footerLogo' className='h-20 w-30'/>
+          <p className='w-50'>Discover jewelry inspired by Nepalese tradition,
+          crafted to preserve our cultural heritage and celebrate
+          timeless beauty.</p>
           <div className='flex row gap-2'>
             <FaFacebook/>
             <FaInstagram/>
